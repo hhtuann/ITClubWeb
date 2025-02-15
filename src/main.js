@@ -10,3 +10,20 @@ faqItems.forEach((item) => {
     arrow.textContent = answer.classList.contains("open") ? "▲" : "▼";
   });
 });
+
+const sidebar = document.querySelector(".sidebar");
+const menuButton = document.querySelector(".menu-button");
+const overlay = document.querySelector(".overlay");
+
+menuButton.addEventListener("click", function (event) {
+  event.stopPropagation();
+  sidebar.classList.toggle("open");
+  overlay.classList.toggle("active");
+});
+
+document.addEventListener("click", function (event) {
+  if (!sidebar.contains(event.target) && sidebar.classList.contains("open")) {
+    sidebar.classList.toggle("open");
+    overlay.classList.toggle("active");
+  }
+});
