@@ -84,14 +84,15 @@ body {
 
 .faq-title h1 {
     text-align: center;
-    font-size: 50px;
+    font-size: 60px;
     font-weight: bold;
 }
 
 .faq-title h2 {
     text-align: center;
     font-size: 20px;
-    margin: 10px;
+    margin: 5px;
+    color: rgb(165, 169, 174);
 }
 
 .faq-container {
@@ -116,10 +117,21 @@ body {
     align-items: center;
 }
 
+.faq-question:hover {
+    color: rgb(165, 169, 174);
+}
+
 .faq-answer {
     max-height: 0;
     overflow: hidden;
-    transition: max-height 0.5s ease-in-out;
+    transition: max-height 0.8s ease-in-out;
+}
+.faq-answer p {
+    padding: 15px 10px 0px 10px;
+}
+
+.faq-answer.open {
+    max-height: 1000px;
 }
 
 
